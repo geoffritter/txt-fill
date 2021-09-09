@@ -1,0 +1,17 @@
+{
+  "name": "txt-fill",
+  "version": "1.0.0",
+  "description": "A collection of web components to fill in randomly generated text.",
+  "main": "txt-fill.js",
+  "author": "Geoff Ritter",
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "lorem ipsum"
+  ],
+  "scripts": {
+    "build": "npx rollup -c ./rollup.config.js",
+    "docs": "npx jsdoc -d ./docs/ -R ./README.md -P ./package.json -r ./src/",
+    "start": "npx http-server"
+  }
+}

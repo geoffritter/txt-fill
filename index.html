@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>txt-fill</title>
+  <!-- You may need a poly fill for customElements if you want to use <txt-fill></txt-fill> -->
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.2.7/webcomponents-bundle.js"></script>
+  <!-- Load the txt-fill element -->
+  <script type="module" src="./src/txt-fill.js" defer></script>
+  <script type="module" defer>
+    window.addEventListener('DOMContentLoaded', function() {
+      txtfill.addType('CustomDefinition', {
+        "titles": [
+          "Example Title"
+        ],
+        "sentences": [
+          "This is a sentence."
+        ]
+      });
+    });
+  </script>
+</head>
+<body>
+
+<h1>TXT Fill</h1>
+<p>This is a collection of custom elements to help with prototyping a layout
+using filler text. The following is an example of what it does and how to use
+it.</p>
+
+
+<h1 is="txt-fill-heading"></h1>
+<txt-fill></txt-fill>
+<h2 is="txt-fill-heading"></h2>
+<txt-fill-unwrap></txt-fill-unwrap>
+<div is="txt-fill-div"></div>
+<div is="txt-fill-div" wrap="p" w="80" m="120" p="2"></div>
+
+<hr>
+
+<h1 is="txt-fill-heading" type="CustomDefinition"></h1>
+<div is="txt-fill-div" type="CustomDefinition" wrap="p" w="80" m="120" p="2"></div>
+
+
+</body>
+</html>
